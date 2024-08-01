@@ -1,0 +1,26 @@
+Non-terminals:
+
+<Program>: Represents the overall program.
+<State>: Represents a state in the behavior tree.
+<Conditions>: Represents the condition nodes in a state.
+<Actions>: Represents the action nodes in a state.
+
+Terminals:
+
+pick_up
+drop_off
+consume
+explore
+go_to_patch
+return
+food_available
+at_den
+hungry
+safe_area
+
+Production Rules:
+
+<Program> -> <State>
+<State> -> CSequence(name='state_seq', children=[<Conditions>, <Actions>])
+<Conditions> -> [food_available, at_den, hungry, safe_area]
+<Actions> -> [pick_up, drop_off, consume, explore, go_to_patch, return]

@@ -1,0 +1,29 @@
+digraph pastafarianism {
+ordering=out;
+graph [fontname="times-roman"];
+node [fontname="times-roman"];
+edge [fontname="times-roman"];
+Root [label="Ⓜ Root", shape=octagon, style=filled, fillcolor=cyan, fontsize=9, fontcolor=black];
+"Find and Return Food" [label="Ⓜ Find and Return Food", shape=box, style=filled, fillcolor=orange, fontsize=9, fontcolor=black];
+Root -> "Find and Return Food";
+"Food Available" [label="Food Available", shape=ellipse, style=filled, fillcolor=gray, fontsize=9, fontcolor=black];
+"Find and Return Food" -> "Food Available";
+"Go To Patch" [label="Go To Patch", shape=ellipse, style=filled, fillcolor=gray, fontsize=9, fontcolor=black];
+"Find and Return Food" -> "Go To Patch";
+"Pick Up" [label="Pick Up", shape=ellipse, style=filled, fillcolor=gray, fontsize=9, fontcolor=black];
+"Find and Return Food" -> "Pick Up";
+"Return To Den" [label="Return To Den", shape=ellipse, style=filled, fillcolor=gray, fontsize=9, fontcolor=black];
+"Find and Return Food" -> "Return To Den";
+"Drop Off" [label="Drop Off", shape=ellipse, style=filled, fillcolor=gray, fontsize=9, fontcolor=black];
+"Find and Return Food" -> "Drop Off";
+"Explore and Eat" [label="Ⓜ Explore and Eat", shape=box, style=filled, fillcolor=orange, fontsize=9, fontcolor=black];
+Root -> "Explore and Eat";
+Hungry [label=Hungry, shape=ellipse, style=filled, fillcolor=gray, fontsize=9, fontcolor=black];
+"Explore and Eat" -> Hungry;
+"Safe Area" [label="Safe Area", shape=ellipse, style=filled, fillcolor=gray, fontsize=9, fontcolor=black];
+"Explore and Eat" -> "Safe Area";
+Explore [label=Explore, shape=ellipse, style=filled, fillcolor=gray, fontsize=9, fontcolor=black];
+"Explore and Eat" -> Explore;
+Consume [label=Consume, shape=ellipse, style=filled, fillcolor=gray, fontsize=9, fontcolor=black];
+"Explore and Eat" -> Consume;
+}
